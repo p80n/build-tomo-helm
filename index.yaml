@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  build-tomo:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2021-01-08T15:14:57.970139262-05:00"
+    description: WIP Simple docker image builder for Kubernetes
+    digest: fc8c75d5be2913399cc84fdfa2a7ef1775dd8094e8fa0e11c0af3d092035fc78
+    name: build-tomo
+    type: application
+    urls:
+    - build-tomo-0.0.1.tgz
+    version: 0.0.1
+generated: "2021-01-08T15:14:57.966416813-05:00"
