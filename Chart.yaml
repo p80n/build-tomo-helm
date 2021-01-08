@@ -1,0 +1,6 @@
+apiVersion: v2
+name: build-tomo
+description: WIP Simple docker image builder for Kubernetes
+type: application
+version: 0.0.4
+appVersion: 0.0.1
