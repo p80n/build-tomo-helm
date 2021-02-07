@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "build-tomo-js.fullname" . }}
+  name: {{ include "build-tomo.fullname" . }}
   labels:
-    {{- include "build-tomo-js.labels" . | nindent 4 }}
+    {{- include "build-tomo.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: nodejs
+      targetPort: http
       protocol: TCP
-      name: nodejs
+      name: http
   selector:
-    {{- include "build-tomo-js.selectorLabels" . | nindent 4 }}
+    {{- include "build-tomo.selectorLabels" . | nindent 4 }}

@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "build-tomo-js.fullname" . }}
+  name: {{ include "build-tomo.fullname" . }}
   labels:
-    {{- include "build-tomo-js.labels" . | nindent 4 }}
+    {{- include "build-tomo.labels" . | nindent 4 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "build-tomo-js.selectorLabels" . | nindent 6 }}
+      {{- include "build-tomo.selectorLabels" . | nindent 6 }}
   template:
     metadata:
     {{- with .Values.podAnnotations }}
@@ -16,19 +16,14 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       labels:
-        name: {{ include "build-tomo-js.name" . }}
-        {{- include "build-tomo-js.selectorLabels" . | nindent 8 }}
+        name: {{ include "build-tomo.name" . }}
+        {{- include "build-tomo.selectorLabels" . | nindent 8 }}
     spec:
-      # Put this values?
-      dnsConfig:
-        options:
-        - name: ndots
-          value: "1"
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "build-tomo-js.serviceAccountName" . }}
+      serviceAccountName: {{ include "build-tomo.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -39,17 +34,17 @@ spec:
           - secretRef:
               name: credentials
           ports:
-            - name: nodejs
-              containerPort: 3000
+            - name: http
+              containerPort: 8000
               protocol: TCP
           livenessProbe:
             httpGet:
               path: /healthz
-              port: nodejs
+              port: http
           readinessProbe:
             httpGet:
               path: /healthz
-              port: nodejs
+              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           securityContext:

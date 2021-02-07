@@ -5,7 +5,7 @@ dockerUser:
 dockerToken:
 
 image:
-  repository: p80n/build-tomo-js
+  repository: p80n/build-tomo-server
   pullPolicy: IfNotPresent
   tag: ""
 
@@ -33,7 +33,7 @@ securityContext:
 
 service:
   type: ClusterIP
-  port: 3000
+  port: 8000
 
 ingress:
   enabled: true
