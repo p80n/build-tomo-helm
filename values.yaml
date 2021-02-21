@@ -1,13 +1,22 @@
 replicaCount: 1
 
-githubSecret:
-dockerUser:
-dockerToken:
+credentials:
+  # define values for *one* of the following (environment or secret or secretRef); the other two should be left null
+  environment:
+    githubSecret:
+    dockerToken:
+    dockerUser:
+  secret:
+    githubSecret:
+    dockerToken:
+    dockerUser:
+  # name of user-created secret with above credentials defined
+  secretRef:
 
 image:
   repository: p80n/build-tomo-server
   pullPolicy: IfNotPresent
-  tag: ""
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
