@@ -30,9 +30,21 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- if or .Values.credentials.secret  .Values.credentials.secretRef }}
           envFrom:
           - secretRef:
-              name: credentials
+              name: {{ default "credentials"  .Values.credentials.secretRef }}
+          {{ else }}
+          env:
+          {{- with .Values.credentials.environment }}
+          - name: GITHUB_WEBHOOK_SECRET
+            value: {{ .githubSecret }}
+          - name: DOCKER_TOKEN
+            value: {{ .dockerToken }}
+          - name: DOCKER_USER
+            value: {{ .dockerUser }}
+          {{- end }}
+          {{- end }}
           ports:
             - name: http
               containerPort: 8000
