@@ -1,3 +1,4 @@
+
 replicaCount: 1
 
 credentials:
@@ -23,7 +24,6 @@ nameOverride: ""
 fullnameOverride: ""
 
 serviceAccount:
-  create: true
   annotations: {}
   name: ""
 
