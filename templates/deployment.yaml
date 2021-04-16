@@ -39,7 +39,7 @@ spec:
           env:
           {{- if .Values.buildJobImage }}
           - name: BUILD_JOB_IMAGE
-            value: .Values.buildJobImage
+            value: {{ .Values.buildJobImage }}
           {{- end }}
           {{- with .Values.credentials.environment }}
           - name: GITHUB_WEBHOOK_SECRET
