@@ -2,15 +2,15 @@
 replicaCount: 1
 
 credentials:
-  # define values for *one* of the following (environment or secret or secretRef); the other two should be left null
+  # define values for *one* of the following (environment or secret or secretRef); the other two should be removed/left null
   environment:
     githubSecret:
     dockerToken:
     dockerUser:
   secret:
-    githubSecret:
-    dockerToken:
-    dockerUser:
+    # githubSecret:
+    # dockerToken:
+    # dockerUser:
   # name of user-created secret with above credentials defined
   secretRef:
 
