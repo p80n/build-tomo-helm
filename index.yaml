@@ -3,7 +3,17 @@ entries:
   build-tomo:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2021-02-23T20:08:35.589273019-05:00"
+    created: "2021-04-16T08:41:59.63115939-04:00"
+    description: WIP Simple docker image builder for Kubernetes
+    digest: 41158b8c45d27062aba88ca77c233394d7806e84ed3f8a8556275229398feb98
+    name: build-tomo
+    type: application
+    urls:
+    - build-tomo-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2021-04-16T08:41:59.62919765-04:00"
     description: WIP Simple docker image builder for Kubernetes
     digest: 1013cd8abc881216e02829e0d0b944ebde1d29f69249355d20959727e2bc0237
     name: build-tomo
@@ -13,7 +23,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2021-02-23T20:08:35.588372132-05:00"
+    created: "2021-04-16T08:41:59.627323574-04:00"
     description: WIP Simple docker image builder for Kubernetes
     digest: ff2099e5781a2e7edd9ea6ac0ed859e022cab39de28f66ce16f5c8dc298f0fa3
     name: build-tomo
@@ -23,7 +33,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2021-02-23T20:08:35.587012531-05:00"
+    created: "2021-04-16T08:41:59.62523177-04:00"
     description: WIP Simple docker image builder for Kubernetes
     digest: 60cdd16f51730124b9c018c6f808ed5ea3fc88be4c8b8143a216610ddbd601e2
     name: build-tomo
@@ -33,7 +43,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2021-02-23T20:08:35.576945317-05:00"
+    created: "2021-04-16T08:41:59.608193415-04:00"
     description: WIP Simple docker image builder for Kubernetes
     digest: 92add694ca9a909911459af7b23bab01d3a00513175dc631bdd5f9ff104f3788
     name: build-tomo
@@ -43,7 +53,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2021-02-23T20:08:35.570127645-05:00"
+    created: "2021-04-16T08:41:59.602056191-04:00"
     description: WIP Simple docker image builder for Kubernetes
     digest: fc8c75d5be2913399cc84fdfa2a7ef1775dd8094e8fa0e11c0af3d092035fc78
     name: build-tomo
@@ -51,4 +61,4 @@ entries:
     urls:
     - build-tomo-0.0.1.tgz
     version: 0.0.1
-generated: "2021-02-23T20:08:35.568593966-05:00"
+generated: "2021-04-16T08:41:59.600581945-04:00"
